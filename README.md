@@ -1,4 +1,6 @@
-<img src="logo.svg" alt="cookiecutter-uv logo" width="64px" />
+<a href="https://github.com/esadek/cookiecutter-uv">
+    <img src="logo.svg" alt="cookiecutter-uv logo" width="64px" />
+</a>
 
 # cookiecutter-uv
 
