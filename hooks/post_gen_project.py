@@ -28,6 +28,7 @@ def add_pytest() -> None:
     subprocess.run(["uv", "add", "--dev", "pytest"])
     os.mkdir("tests")
     append_file("Makefile", "\n.PHONY: test\ntest:\n\tuv run pytest tests\n")
+    append_file(".gitignore", "\n# pytest\n.pytest_cache/\n")
 
 
 def add_pytest_step() -> None:
