@@ -1,6 +1,7 @@
-.PHONY: lint
-lint:
+.PHONY: check
+check:
 	uv run ruff check --fix
+	uv run mypy .
 
 .PHONY: format
 format:
