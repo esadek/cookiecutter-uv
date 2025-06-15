@@ -1,0 +1,15 @@
+{
+    "project_name": "My Python Project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-').replace('.', '-') }}",
+    "author": "Emil Sadek",
+    "uv_template": [
+        "application",
+        "package",
+        "library",
+        "bare"
+    ],
+    "mit_license": false,
+    "pytest": false,
+    "github_actions": false,
+    "mkdocs_material": false
+}
