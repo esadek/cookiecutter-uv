@@ -12,7 +12,6 @@
 - Linter and formatter: [Ruff](https://docs.astral.sh/ruff/)
 - Type checker: [mypy](https://mypy.readthedocs.io/en/stable/)
 - Testing framework: [pytest](https://docs.pytest.org/en/stable/)
-- Command runner: [Just](https://just.systems/man/en/)
 - Continuous integration: [GitHub Actions](https://docs.github.com/en/actions)
 - Documentation: [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - Editor configuration: [EditorConfig](https://editorconfig.org/)
