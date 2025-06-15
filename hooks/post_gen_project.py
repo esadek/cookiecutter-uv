@@ -29,9 +29,6 @@ def add_pytest() -> None:
     os.mkdir("tests")
     append_file("Makefile", "\n.PHONY: test\ntest:\n\tuv run pytest tests\n")
     append_file(".gitignore", "\n# pytest\n.pytest_cache/\n")
-
-
-def add_pytest_step() -> None:
     append_file(
         ".github/workflows/ci.yml",
         "\n      - name: Run pytest\n        run: uv run pytest tests\n",
@@ -63,9 +60,7 @@ if __name__ == "__main__":
     if {{cookiecutter.pytest}}:  # noqa: F821
         add_pytest()
 
-    if {{cookiecutter.github_actions}}:  # noqa: F821
-        add_pytest_step()
-    else:
+    if not {{cookiecutter.github_actions}}:  # noqa: F821
         remove_github_actions()
 
     if {{cookiecutter.mkdocs_material}}:  # noqa: F821
