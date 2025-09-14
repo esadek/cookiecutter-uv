@@ -1,0 +1,16 @@
+alias fmt := format
+alias mypy := check-types
+
+default:
+    just --list
+
+format:
+    uv run ruff format
+
+lint:
+    uv run ruff check --fix
+
+ruff: format lint
+
+check-types:
+    uv run mypy .

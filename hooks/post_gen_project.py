@@ -27,7 +27,7 @@ def remove_license() -> None:
 def add_pytest() -> None:
     subprocess.run(["uv", "add", "--dev", "pytest"])
     os.mkdir("tests")
-    append_file("Makefile", "\n.PHONY: test\ntest:\n\tuv run pytest tests\n")
+    append_file("justfile", "\ntest:\n    uv run pytest tests\n")
     append_file(".gitignore", "\n# pytest\n.pytest_cache/\n")
     append_file(
         ".github/workflows/ci.yml",
@@ -43,7 +43,7 @@ def add_mkdocs_material() -> None:
     subprocess.run(["uv", "add", "--dev", "mkdocs-material"])
     subprocess.run(["uv", "run", "mkdocs", "new", "."])
     append_file("mkdocs.yml", "theme:\n  name: material\n")
-    append_file("Makefile", "\n.PHONY: docs\ndocs:\n\tuv run mkdocs serve\n")
+    append_file("justfile", "\ndocs:\n    uv run mkdocs serve\n")
 
 
 def add_yaml_config() -> None:
