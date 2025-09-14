@@ -54,7 +54,7 @@ if __name__ == "__main__":
     initialize_project()
     add_dev_dependencies()
 
-    if not {{cookiecutter.mit_license}}:  # noqa: F821
+    if "{{cookiecutter.license}}" == "None":  # noqa: F821
         remove_license()
 
     if {{cookiecutter.pytest}}:  # noqa: F821

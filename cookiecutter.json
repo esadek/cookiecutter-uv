@@ -8,7 +8,11 @@
         "library",
         "bare"
     ],
-    "mit_license": false,
+    "license": [
+        "MIT",
+        "Apache-2.0",
+        "None"
+    ],
     "pytest": false,
     "github_actions": false,
     "mkdocs_material": false
